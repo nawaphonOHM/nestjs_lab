@@ -22,7 +22,7 @@ export class UserEntity {
   @Column({ name: 'family_name', type: 'varchar' })
   private familyName: string;
 
-  @OneToMany(() => PhotoEntity, (user) => user.getUser())
+  @OneToMany(() => PhotoEntity, (user) => user.getUser)
   private photos: PhotoEntity[];
 
   public getId(): number {

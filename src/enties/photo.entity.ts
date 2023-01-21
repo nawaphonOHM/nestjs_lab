@@ -1,4 +1,3 @@
-import { UserEntity } from 'src/user/user.entity';
 import {
   Column,
   Entity,
@@ -6,6 +5,7 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { UserEntity } from './user.entity';
 
 const entityConfig: EntityOptions = {
   name: 'Photo',
