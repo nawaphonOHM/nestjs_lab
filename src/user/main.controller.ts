@@ -6,7 +6,7 @@ import { UserService } from './user.service';
 export class MainController {
   constructor(private readonly userService: UserService) {}
 
-  @Get('/create-data')
+  @Get('/fetch-data')
   public async createData(): Promise<UserEntity[]> {
     const returnedData: UserEntity[] = [];
 

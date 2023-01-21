@@ -1,1 +1,1 @@
-GET http://localhost:3000/typeorm-test/create-data HTTP/1.1
+GET http://localhost:3000/typeorm-test/fetch-data HTTP/1.1
