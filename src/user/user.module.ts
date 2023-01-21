@@ -1,7 +1,7 @@
 import { Module, ModuleMetadata } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MainController } from 'src/main/main.controller';
 import { PhotoEntity } from 'src/photo/photo.entity';
+import { MainController } from './main.controller';
 import { UserEntity } from './user.entity';
 
 const metadata: ModuleMetadata = {
