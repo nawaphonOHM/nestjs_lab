@@ -4,7 +4,7 @@ import { UserEntity } from './user.entity';
 
 export const userNewStyle: EntitySchema<UserEntity> =
   new EntitySchema<UserEntity>({
-    name: 'User_Detail',
+    name: 'UserEntity',
     target: UserEntity,
     columns: {
       getId: {
@@ -29,7 +29,7 @@ export const userNewStyle: EntitySchema<UserEntity> =
 
   export const photoNewStyle: EntitySchema<PhotoEntity> =
   new EntitySchema<PhotoEntity>({
-    name: 'Photo',
+    name: 'PhotoEntity',
     target: PhotoEntity,
     columns: {
       getId: {
