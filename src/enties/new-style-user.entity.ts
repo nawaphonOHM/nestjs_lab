@@ -27,24 +27,24 @@ export const userNewStyle: EntitySchema<UserEntity> =
     },
   });
 
-  export const photoNewStyle: EntitySchema<PhotoEntity> =
+export const photoNewStyle: EntitySchema<PhotoEntity> =
   new EntitySchema<PhotoEntity>({
     name: 'PhotoEntity',
     target: PhotoEntity,
     columns: {
       getId: {
-        type: Number, 
-        primary: true, 
-        generated: true
-      }, 
+        type: Number,
+        primary: true,
+        generated: true,
+      },
       getPhotoName: {
-        type: String
-      }
+        type: String,
+      },
     },
     relations: {
       getUser: {
-        type: 'many-to-one', 
-        target: 'UserEntity'
-      }
-    }
+        type: 'many-to-one',
+        target: 'UserEntity',
+      },
+    },
   });

@@ -6,7 +6,9 @@ import { MainController } from './main.controller';
 import { UserService } from './user.service';
 
 const metadata: ModuleMetadata = {
-  imports: [TypeOrmModule.forFeature([UserEntity, userNewStyle, photoNewStyle])],
+  imports: [
+    TypeOrmModule.forFeature([UserEntity, userNewStyle, photoNewStyle]),
+  ],
   controllers: [MainController],
   providers: [UserService],
 };
