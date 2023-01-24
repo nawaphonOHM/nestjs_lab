@@ -23,7 +23,7 @@ export class UserEntity {
   private familyName: string;
 
   @OneToMany(() => PhotoEntity, (user) => user.getUser)
-  private photos: PhotoEntity[];
+  private _photos: PhotoEntity[];
 
   public getId(): number {
     return this.id;
@@ -46,5 +46,12 @@ export class UserEntity {
 
   public setFamilyName(familyName: string): void {
     this.familyName = familyName;
+  }
+
+  public getPhotos(): PhotoEntity[] {
+    return this._photos;
+  }
+  public setPhotos(value: PhotoEntity[]): void {
+    this._photos = value;
   }
 }
