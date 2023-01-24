@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Version } from '@nestjs/common';
 import { UserEntity } from 'src/enties/user.entity';
 import { UserService } from './user.service';
 
@@ -6,6 +6,7 @@ import { UserService } from './user.service';
 export class MainController {
   constructor(private readonly userService: UserService) {}
 
+  @Version('1')
   @Get('/fetch-data')
   public async createData(): Promise<UserEntity[]> {
     const returnedData: UserEntity[] = [];
