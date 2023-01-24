@@ -8,10 +8,22 @@ export class MainController {
 
   @Version('1')
   @Get('/fetch-data')
-  public async createData(): Promise<UserEntity[]> {
+  public async createDataV1(): Promise<UserEntity[]> {
     const returnedData: UserEntity[] = [];
 
-    await this.userService.findAll().then((data: UserEntity[]): void => {
+    await this.userService.findAllV1().then((data: UserEntity[]): void => {
+      returnedData.push(...data);
+    });
+
+    return returnedData;
+  }
+
+  @Version('2')
+  @Get('/fetch-data')
+  public async createDataV2(): Promise<UserEntity[]> {
+    const returnedData: UserEntity[] = [];
+
+    await this.userService.findAllV2().then((data: UserEntity[]): void => {
       returnedData.push(...data);
     });
 
