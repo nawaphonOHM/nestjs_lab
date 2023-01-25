@@ -3,7 +3,6 @@ services:
     image: my-database-image
     build:
       dockerfile: ./DockerFile
-    ports:
-      -"5432:5432"
+    ports: ["5432:5432"]
     container_name: basic-database
     
